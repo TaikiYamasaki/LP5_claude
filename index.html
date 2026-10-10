@@ -66,7 +66,6 @@
 
   <section id="top" class="s23">
     <div class="s24"></div>
-    <div class="s25"></div>
     <div class="s26">
       <div class="s27">
         <div class="s28">GOOD DAY,</div>
@@ -84,10 +83,7 @@
           <image-slot id="sb-hero" shape="rounded" radius="26" placeholder="メインビジュアル（バーガー＆ドリンク）"></image-slot>
         </div>
         <div class="s37">
-          <span class="s38">こだわり</span>
-          <span class="s39">100%</span>
-          <span class="s40">BEEF</span>
-          <span class="s41">SINCE 2024</span>
+          <img src="./uploads/バッチ.webp" alt="100% BEEF PREMIUM QUALITY" class="s160">
         </div>
       </div>
     </div>
@@ -99,9 +95,13 @@
       <span class="s45">人気メニュー</span>
     </div>
     <div class="s46">
-      <button type="button" onClick="{{ popPrev }}" class="s47" style-hover="background:#F5A800">‹</button>
-      <button type="button" onClick="{{ popNext }}" class="s48" style-hover="background:#F5A800">›</button>
-      <div class="s49">
+      <sc-if value="{{ canPopPrev }}" hint-placeholder-val="{{ false }}">
+        <button type="button" onClick="{{ popPrev }}" class="s47" style-hover="background:#F5A800">‹</button>
+      </sc-if>
+      <sc-if value="{{ canPopNext }}" hint-placeholder-val="{{ true }}">
+        <button type="button" onClick="{{ popNext }}" class="s48" style-hover="background:#F5A800">›</button>
+      </sc-if>
+      <div class="s49" style="width:{{ popTrackW }}px;max-width:100%;margin:0 auto;">
         <div class="s50" style="transform:translateX({{ popX }}px)">
           <sc-for list="{{ popular }}" as="item" hint-placeholder-count="5">
             <div class="s51" style-hover="transform:translateY(-6px)">
@@ -127,8 +127,12 @@
       <span class="s45">お得なセット</span>
     </div>
     <div class="s46">
-      <button type="button" onClick="{{ setPrev }}" class="s60" style-hover="background:#F5A800">‹</button>
-      <button type="button" onClick="{{ setNext }}" class="s61" style-hover="background:#F5A800">›</button>
+      <sc-if value="{{ canSetPrev }}" hint-placeholder-val="{{ false }}">
+        <button type="button" onClick="{{ setPrev }}" class="s60" style-hover="background:#F5A800">‹</button>
+      </sc-if>
+      <sc-if value="{{ canSetNext }}" hint-placeholder-val="{{ true }}">
+        <button type="button" onClick="{{ setNext }}" class="s61" style-hover="background:#F5A800">›</button>
+      </sc-if>
       <div class="s62">
         <div class="s50" style="transform:translateX({{ setX }}px)">
           <sc-for list="{{ sets }}" as="item" hint-placeholder-count="3">
@@ -157,9 +161,13 @@
         <span class="s45">キャンペーン</span>
       </div>
       <div class="s46">
-        <button type="button" onClick="{{ campPrev }}" class="s70" style-hover="background:#F5A800">‹</button>
-        <button type="button" onClick="{{ campNext }}" class="s71" style-hover="background:#F5A800">›</button>
-        <div class="s72">
+        <sc-if value="{{ canCampPrev }}" hint-placeholder-val="{{ false }}">
+          <button type="button" onClick="{{ campPrev }}" class="s70" style-hover="background:#F5A800">‹</button>
+        </sc-if>
+        <sc-if value="{{ canCampNext }}" hint-placeholder-val="{{ true }}">
+          <button type="button" onClick="{{ campNext }}" class="s71" style-hover="background:#F5A800">›</button>
+        </sc-if>
+        <div class="s72" style="width:{{ campTrackW }}px;max-width:100%;margin:0 auto;">
           <div class="s73" style="transform:translateX({{ campX }}px)">
             <sc-for list="{{ camps }}" as="c" hint-placeholder-count="4">
               <div class="s74" style="background:{{ c.bg }}" style-hover="transform:translateY(-5px)">

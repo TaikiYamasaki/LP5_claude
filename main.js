@@ -44,10 +44,32 @@ class Component extends DCLogic {
       { date: '2024.04.15', text: 'アプリ会員限定クーポン配信中！' }
     ];
     const areaLabel = { tokyo: '東京', kanagawa: '神奈川', osaka: '大阪', fukuoka: '福岡' };
+    const vw = window.innerWidth;
+    const setCardW = vw <= 600 ? Math.min(352, vw - 96) : 352;
+    const setStep = setCardW + 24;
+    const setMax = Math.max(0, sets.length - 3);
+    const popMax = Math.max(0, popular.length - 5);
+    const campMax = Math.max(0, camps.length - 4);
+    const padX = vw <= 600 ? 42 : 60;
+    const containerW = Math.min(vw, 1330) - padX * 2;
+    const popStep = 244;
+    const popVisible = Math.max(1, Math.floor((containerW + 24) / popStep));
+    const popTrackW = popVisible * popStep - 24;
+    const campStep = 286;
+    const campVisible = Math.max(1, Math.floor((containerW - 8 + 20) / campStep));
+    const campTrackW = campVisible * campStep - 20 + 8;
     return {
       popular, sets, camps, news,
       popX: -this.state.pop * 244,
-      setX: -this.state.set * 376,
+      popTrackW,
+      campTrackW,
+      setX: -this.state.set * setStep,
+      canPopPrev: this.state.pop > 0,
+      canPopNext: this.state.pop < popMax,
+      canSetPrev: this.state.set > 0,
+      canSetNext: this.state.set < setMax,
+      canCampPrev: this.state.camp > 0,
+      canCampNext: this.state.camp < campMax,
       campX: -this.state.camp * 286,
       menuOpen: this.state.menuOpen,
       showCampaign: this.props.showCampaign ?? true,

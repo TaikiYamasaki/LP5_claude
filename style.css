@@ -41,7 +41,8 @@ a:hover{color:#D2620A;}
 .s34{display:none;}
 .s35{display:none;}
 .s36{display:none;}
-.s37{position:absolute;right:26px;bottom:-14px;width:132px;height:132px;border-radius:50%;background:#fff;border:2px dashed #F0BE4B;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;box-shadow:0 10px 26px rgba(120,80,20,.14);}
+.s37{position:absolute;right:26px;bottom:-14px;width:132px;height:132px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.s160{width:100%;height:100%;object-fit:contain;}
 .s38{font-family:'Permanent Marker',cursive;font-size:11px;color:#EF7C1B;}
 .s39{font-family:'Fredoka',sans-serif;font-weight:700;font-size:27px;line-height:1;color:#3F2E1E;}
 .s40{font-family:'Fredoka',sans-serif;font-weight:600;font-size:13px;letter-spacing:.16em;color:#3F2E1E;}
@@ -180,7 +181,7 @@ a:hover{color:#D2620A;}
   .s14{width:36px;height:36px;}
   .s17{width:min(320px,88vw);}
 
-  .s23{padding:32px 0 48px;}
+  .s23{padding:32px 0 48px;background-image:url('./uploads/スマホ表示.png');}
   .s28{font-size:32px;}
   .s29{font-size:36px;}
   .s30{font-size:15px;line-height:1.8;}
@@ -196,6 +197,7 @@ a:hover{color:#D2620A;}
   .s45{font-size:11px;}
   .s46{padding:0 42px;}
   .s47,.s48,.s60,.s61,.s70,.s71{width:36px;height:36px;font-size:15px;}
+  .s63{width:min(352px,calc(100vw - 96px));}
 
   .s80{padding:36px 0;}
   .s81{gap:16px;}
@@ -208,8 +210,9 @@ a:hover{color:#D2620A;}
   .s118{flex-direction:column;gap:14px;}
   .s120{font-size:20px;text-align:center;}
 
-  .s123{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px;height:auto;}
-  .s124{position:static;transform:none;left:auto;bottom:auto;width:calc(100% - 32px);max-width:420px;margin:16px auto 0;flex-wrap:wrap;justify-content:center;text-align:center;padding:14px 18px;}
+  .s122{padding-bottom:28px;}
+  .s123{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px;height:auto;}
+  .s124{position:static;transform:none;left:auto;bottom:auto;width:calc(100% - 32px);max-width:420px;margin:28px auto 0;flex-wrap:wrap;justify-content:center;text-align:center;padding:14px 18px;}
   .s125{font-size:15px;white-space:normal;}
 
   .s127{padding:40px 0 24px;}
