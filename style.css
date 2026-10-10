@@ -179,7 +179,7 @@ a:hover{color:#D2620A;}
   .s12{display:none;}
   .s13{padding:9px 18px;font-size:12.5px;}
   .s14{width:36px;height:36px;}
-  .s17{width:min(320px,88vw);}
+  .s17{width:min(320px,88%);}
 
   .s23{padding:32px 0 48px;background-image:url('./uploads/スマホ表示.png');}
   .s28{font-size:32px;}
@@ -197,7 +197,7 @@ a:hover{color:#D2620A;}
   .s45{font-size:11px;}
   .s46{padding:0 42px;}
   .s47,.s48,.s60,.s61,.s70,.s71{width:36px;height:36px;font-size:15px;}
-  .s63{width:min(352px,calc(100vw - 96px));}
+  .s63{width:min(352px,100%);}
 
   .s80{padding:36px 0;}
   .s81{gap:16px;}

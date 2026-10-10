@@ -45,7 +45,8 @@ class Component extends DCLogic {
     ];
     const areaLabel = { tokyo: '東京', kanagawa: '神奈川', osaka: '大阪', fukuoka: '福岡' };
     const vw = window.innerWidth;
-    const setCardW = vw <= 600 ? Math.min(352, vw - 96) : 352;
+    const setWrapEl = document.querySelector('.s62');
+    const setCardW = setWrapEl ? Math.min(352, setWrapEl.clientWidth) : (vw <= 600 ? Math.min(352, vw - 96) : 352);
     const setStep = setCardW + 24;
     const setMax = Math.max(0, sets.length - 3);
     const popMax = Math.max(0, popular.length - 5);
