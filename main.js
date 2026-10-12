@@ -48,17 +48,18 @@ class Component extends DCLogic {
     const setWrapEl = document.querySelector('.s62');
     const setCardW = setWrapEl ? Math.min(352, setWrapEl.clientWidth) : (vw <= 600 ? Math.min(352, vw - 96) : 352);
     const setStep = setCardW + 24;
-    const setMax = Math.max(0, sets.length - 3);
-    const popMax = Math.max(0, popular.length - 5);
-    const campMax = Math.max(0, camps.length - 4);
+    const setVisible = setWrapEl ? Math.max(1, Math.round(setWrapEl.clientWidth / setStep)) : (vw <= 600 ? 1 : 3);
+    const setMax = Math.max(0, sets.length - setVisible);
     const padX = vw <= 600 ? 42 : 60;
     const containerW = Math.min(vw, 1330) - padX * 2;
     const popStep = 244;
     const popVisible = Math.max(1, Math.floor((containerW + 24) / popStep));
     const popTrackW = popVisible * popStep - 24;
+    const popMax = Math.max(0, popular.length - popVisible);
     const campStep = 286;
     const campVisible = Math.max(1, Math.floor((containerW - 8 + 20) / campStep));
     const campTrackW = campVisible * campStep - 20 + 8;
+    const campMax = Math.max(0, camps.length - campVisible);
     return {
       popular, sets, camps, news,
       popX: -this.state.pop * 244,
@@ -80,12 +81,12 @@ class Component extends DCLogic {
       searchNote: this.state.note,
       toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
       closeMenu: () => this.setState({ menuOpen: false }),
-      popPrev: e => this.step('pop', -1, popular.length - 5, e),
-      popNext: e => this.step('pop', 1, popular.length - 5, e),
-      setPrev: e => this.step('set', -1, sets.length - 3, e),
-      setNext: e => this.step('set', 1, sets.length - 3, e),
-      campPrev: e => this.step('camp', -1, camps.length - 4, e),
-      campNext: e => this.step('camp', 1, camps.length - 4, e),
+      popPrev: e => this.step('pop', -1, popMax, e),
+      popNext: e => this.step('pop', 1, popMax, e),
+      setPrev: e => this.step('set', -1, setMax, e),
+      setNext: e => this.step('set', 1, setMax, e),
+      campPrev: e => this.step('camp', -1, campMax, e),
+      campNext: e => this.step('camp', 1, campMax, e),
       setArea: e => this.setState({ area: e.target.value }),
       setNear: e => this.setState({ near: e.target.value }),
       search: () => {
