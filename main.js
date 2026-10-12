@@ -16,13 +16,13 @@ class Component extends DCLogic {
 
   renderVals() {
     const popular = [
-      { name: 'サニーチーズバーガー', price: '¥680', slot: 'sb-pop1' },
-      { name: 'アボカドバーガー', price: '¥720', slot: 'sb-pop2' },
-      { name: 'テリヤキバーガー', price: '¥650', slot: 'sb-pop3' },
-      { name: 'ベーコンエッグバーガー', price: '¥750', slot: 'sb-pop4' },
-      { name: 'スパイシーチキンバーガー', price: '¥620', slot: 'sb-pop5' },
-      { name: 'ダブルビーフバーガー', price: '¥890', slot: 'sb-pop6' },
-      { name: 'フィッシュバーガー', price: '¥590', slot: 'sb-pop7' }
+      { name: 'サニーチーズバーガー', price: '¥680', slot: 'sb-pop1', img: './uploads/サニーチーズバーガー.png' },
+      { name: 'アボカドバーガー', price: '¥720', slot: 'sb-pop2', img: './uploads/アボカドバーガー.png' },
+      { name: 'テリヤキバーガー', price: '¥650', slot: 'sb-pop3', img: './uploads/テリヤキバーガー.png' },
+      { name: 'ベーコンエッグバーガー', price: '¥750', slot: 'sb-pop4', img: './uploads/ベーコンエッグバーガー.png' },
+      { name: 'スパイシーチキンバーガー', price: '¥620', slot: 'sb-pop5', img: './uploads/スパイシーチキンバーガー.png' },
+      { name: 'ダブルビーフバーガー', price: '¥890', slot: 'sb-pop6', img: './uploads/ダブルビーフバーガー.png' },
+      { name: 'フィッシュバーガー', price: '¥590', slot: 'sb-pop7', img: './uploads/フィッシュバーガー.png' }
     ];
     const sets = [
       { name: 'サニーチーズバーガーセット', price: '¥1,050', slot: 'sb-set1' },

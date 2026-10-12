@@ -105,7 +105,7 @@
         <div class="s50" style="transform:translateX({{ popX }}px)">
           <sc-for list="{{ popular }}" as="item" hint-placeholder-count="5">
             <div class="s51" style-hover="transform:translateY(-6px)">
-              <image-slot id="{{ item.slot }}" style="width:220px;height:170px;" shape="rounded" radius="14" placeholder="{{ item.name }}"></image-slot>
+              <image-slot id="{{ item.slot }}" style="width:220px;height:170px;" shape="rounded" radius="14" placeholder="{{ item.name }}" src="{{ item.img }}" fit="contain"></image-slot>
               <div class="s53">{{ item.name }}</div>
               <div class="s54">{{ item.price }}</div>
             </div>
