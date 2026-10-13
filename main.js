@@ -25,18 +25,18 @@ class Component extends DCLogic {
       { name: 'フィッシュバーガー', price: '¥590', slot: 'sb-pop7', img: './uploads/フィッシュバーガー.png' }
     ];
     const sets = [
-      { name: 'サニーチーズバーガーセット', price: '¥1,050', slot: 'sb-set1' },
-      { name: 'アボカドバーガーセット', price: '¥1,090', slot: 'sb-set2' },
-      { name: 'テリヤキバーガーセット', price: '¥990', slot: 'sb-set3' },
-      { name: 'ベーコンエッグバーガーセット', price: '¥1,120', slot: 'sb-set4' }
+      { name: 'サニーチーズバーガーセット', price: '¥1,050', slot: 'sb-set1', img: './uploads/チーズバーガーセット.png' },
+      { name: 'アボカドバーガーセット', price: '¥1,090', slot: 'sb-set2', img: './uploads/アボカドバーガーセット.png' },
+      { name: 'テリヤキバーガーセット', price: '¥990', slot: 'sb-set3', img: './uploads/テリヤキバーガーセット.png' },
+      { name: 'ベーコンエッグバーガーセット', price: '¥1,120', slot: 'sb-set4', img: './uploads/ベーコンエッグチーズバーガーセット.png' }
     ];
     const camps = [
-      { tag: '平日ランチ限定', title: 'ポテト＆ドリンクセットが', price: '¥100 OFF!', bg: 'linear-gradient(140deg,#FFD447,#FFB800)', fg: '#4A3527', slot: 'sb-camp1' },
-      { tag: '夏の新定番', title: 'サニーレモネード', price: '¥380', bg: 'linear-gradient(140deg,#7ECBE8,#B8E6F5)', fg: '#0F5470', slot: 'sb-camp2' },
-      { tag: 'スパイシー新登場！', title: 'ハラペーニョチーズバーガー', price: '¥730', bg: 'linear-gradient(140deg,#F5921E,#FFB65C)', fg: '#4A2A05', slot: 'sb-camp3' },
-      { tag: 'おもちゃ付き！', title: 'キッズセット', price: '¥500', bg: 'linear-gradient(140deg,#F79BB8,#FFC2D5)', fg: '#7A2244', slot: 'sb-camp4' },
-      { tag: '10:30まで', title: 'モーニングセット', price: '¥450', bg: 'linear-gradient(140deg,#A8D082,#C9E5AC)', fg: '#2F4D16', slot: 'sb-camp5' },
-      { tag: '夏季限定', title: 'マンゴーシェイク', price: '¥490', bg: 'linear-gradient(140deg,#FFB03A,#FFD08A)', fg: '#5A3305', slot: 'sb-camp6' }
+      { tag: '平日ランチ限定', title: 'ポテト＆ドリンクセットが', price: '¥100 OFF!', bg: 'linear-gradient(140deg,#FFD447,#FFB800)', fg: '#4A3527', slot: 'sb-camp1', img: './uploads/ポテトとコーラ.png' },
+      { tag: '夏の新定番', title: 'サニーレモネード', price: '¥380', bg: 'linear-gradient(140deg,#7ECBE8,#B8E6F5)', fg: '#0F5470', slot: 'sb-camp2', img: './uploads/レモンソーダ.png' },
+      { tag: 'スパイシー新登場！', title: 'ハラペーニョチーズバーガー', price: '¥730', bg: 'linear-gradient(140deg,#F5921E,#FFB65C)', fg: '#4A2A05', slot: 'sb-camp3', img: './uploads/ハラペーニョチーズバーガー.png' },
+      { tag: 'おもちゃ付き！', title: 'キッズセット', price: '¥500', bg: 'linear-gradient(140deg,#F79BB8,#FFC2D5)', fg: '#7A2244', slot: 'sb-camp4', img: './uploads/キッズセット.png' },
+      { tag: '10:30まで', title: 'モーニングセット', price: '¥450', bg: 'linear-gradient(140deg,#A8D082,#C9E5AC)', fg: '#2F4D16', slot: 'sb-camp5', img: './uploads/モーニングセット.png' },
+      { tag: '夏季限定', title: 'マンゴーシェイク', price: '¥490', bg: 'linear-gradient(140deg,#FFB03A,#FFD08A)', fg: '#5A3305', slot: 'sb-camp6', img: './uploads/マンゴーシェイク.png' }
     ];
     const news = [
       { date: '2024.05.01', text: '新商品「ハラペーニョチーズバーガー」登場！' },

@@ -1,5 +1,6 @@
 body{margin:0;background:#FFFBF2;}
 *{box-sizing:border-box;}
+image-slot::part(frame){background:transparent;}
 a{color:#EF7C1B;text-decoration:none;}
 a:hover{color:#D2620A;}
 @keyframes sunspin{to{transform:rotate(360deg)}}
@@ -78,7 +79,7 @@ a:hover{color:#D2620A;}
 .s72{overflow:hidden;padding:4px;}
 .s73{display:flex;gap:20px;transition:transform .5s cubic-bezier(.4,0,.2,1);}
 .s74{flex:none;width:266px;height:172px;border-radius:16px;padding:18px;position:relative;overflow:hidden;cursor:pointer;}
-.s75{position:absolute;right:-14px;bottom:-10px;width:130px;height:130px;opacity:.95;}
+.s75{position:absolute;right:6px;bottom:6px;width:118px;height:118px;opacity:.95;}
 .s76{position:relative;z-index:2;max-width:150px;}
 .s77{display:inline-block;padding:4px 10px;border-radius:6px;background:rgba(255,255,255,.85);font-size:11px;font-weight:700;color:#B4520A;}
 .s78{margin-top:10px;font-size:19px;font-weight:900;line-height:1.35;text-wrap:pretty;}
@@ -122,8 +123,9 @@ a:hover{color:#D2620A;}
 .s118{position:relative;display:flex;align-items:center;justify-content:flex-end;gap:22px;}
 .s120{font-family:'Permanent Marker',cursive;font-size:26px;line-height:1.35;color:#3F2E1E;transform:rotate(-6deg);}
 .s121{color:#EF7C1B;}
-.s122{position:relative;}
-.s123{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));height:230px;}
+.s122{position:relative;padding-bottom:80px;}
+.s123{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));height:320px;}
+.s123 image-slot::part(empty){justify-content:flex-start;padding-top:28px;}
 .s124{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);display:flex;align-items:center;gap:26px;padding:16px 22px 16px 44px;border-radius:999px;background:rgba(255,198,26,.94);box-shadow:0 10px 28px rgba(120,80,20,.22);}
 .s125{font-size:22px;font-weight:900;letter-spacing:.04em;color:#4A3527;white-space:nowrap;}
 .s126{display:inline-flex;align-items:center;gap:12px;padding:12px 18px 12px 26px;border-radius:999px;background:#fff;font-size:13.5px;font-weight:700;color:#4A3527;white-space:nowrap;}
