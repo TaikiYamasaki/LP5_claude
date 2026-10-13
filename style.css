@@ -1,6 +1,7 @@
 body{margin:0;background:#FFFBF2;}
 *{box-sizing:border-box;}
 image-slot::part(frame){background:transparent;}
+#sb-kodawari-mobile{display:none;}
 a{color:#EF7C1B;text-decoration:none;}
 a:hover{color:#D2620A;}
 @keyframes sunspin{to{transform:rotate(360deg)}}
@@ -163,7 +164,8 @@ a:hover{color:#D2620A;}
   .s33{height:340px;margin:0 auto;max-width:460px;}
   .s28{font-size:42px;}
   .s29{font-size:46px;}
-  .s81{grid-template-columns:1fr;}
+  .s81{grid-template-columns:minmax(0,1fr);}
+  .s82,.s90,.s102{min-width:0;}
   .s102{grid-column:auto;}
   .s82,.s90{flex-direction:column;}
   #sb-kodawari{width:100% !important;height:180px !important;min-height:0 !important;}
@@ -175,6 +177,8 @@ a:hover{color:#D2620A;}
 }
 
 @media (max-width:600px){
+  #sb-kodawari{display:none !important;}
+  #sb-kodawari-mobile{display:block !important;width:100% !important;height:220px !important;min-height:0 !important;}
   .s3{padding:8px 16px;gap:10px;}
   .s7{font-size:22px;}
   .s8{font-size:11px;}
